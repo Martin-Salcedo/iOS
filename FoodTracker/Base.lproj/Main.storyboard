@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ov5-2m-pyP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Po3-Rl-M7A">
+            <objects>
+                <viewController id="ov5-2m-pyP" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cy4-IZ-JAn"/>
+                        <viewControllerLayoutGuide type="bottom" id="apN-Fh-Uu8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xyX-mv-Pq2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nueva comida" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhd-wV-HC3">
+                                <rect key="frame" x="20" y="57" width="560" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Siv-TR-B2h">
+                                <rect key="frame" x="20" y="95" width="101" height="30"/>
+                                <state key="normal" title="nueva comida"/>
+                                <connections>
+                                    <action selector="enviarTextoLabel:" destination="ov5-2m-pyP" eventType="touchUpInside" id="RFy-0I-SX0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="tipo de comida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMe-dz-jqu">
+                                <rect key="frame" x="20" y="28" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="oze-KU-RMu">
+                                <rect key="frame" x="20" y="133" width="320" height="320"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gms-DX-Imt" appends="YES" id="45l-Ew-mVg"/>
+                                </connections>
+                            </imageView>
+                            <view contentMode="center" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="zSd-sV-RZH" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="461" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Siv-TR-B2h" firstAttribute="top" secondItem="xhd-wV-HC3" secondAttribute="bottom" constant="8" id="0Kk-70-t8T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oze-KU-RMu" secondAttribute="trailing" constant="45" id="4A5-eI-Nf4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oze-KU-RMu" secondAttribute="trailing" constant="240" id="ABZ-dE-fSx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="oze-KU-RMu" secondAttribute="bottom" constant="147" id="Abe-Qh-qw5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UMe-dz-jqu" secondAttribute="trailing" constant="446" id="JUB-gw-HTR"/>
+                            <constraint firstItem="oze-KU-RMu" firstAttribute="leading" secondItem="xyX-mv-Pq2" secondAttribute="leadingMargin" id="MGF-vX-Ndz"/>
+                            <constraint firstItem="xhd-wV-HC3" firstAttribute="leading" secondItem="xyX-mv-Pq2" secondAttribute="leadingMargin" id="RCx-wT-97I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UMe-dz-jqu" secondAttribute="trailing" id="UN6-PB-8tj"/>
+                            <constraint firstItem="apN-Fh-Uu8" firstAttribute="top" secondItem="oze-KU-RMu" secondAttribute="bottom" id="Umc-RX-cFQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oze-KU-RMu" secondAttribute="trailing" constant="240" id="ZpA-dO-rc6"/>
+                            <constraint firstItem="zSd-sV-RZH" firstAttribute="top" secondItem="oze-KU-RMu" secondAttribute="bottom" constant="31" id="aLc-OX-HrN"/>
+                            <constraint firstItem="xhd-wV-HC3" firstAttribute="top" secondItem="UMe-dz-jqu" secondAttribute="bottom" constant="8" id="bRD-qt-hqm"/>
+                            <constraint firstItem="xhd-wV-HC3" firstAttribute="trailing" secondItem="xyX-mv-Pq2" secondAttribute="trailingMargin" id="fJx-pd-i9K"/>
+                            <constraint firstItem="Siv-TR-B2h" firstAttribute="top" secondItem="xhd-wV-HC3" secondAttribute="bottom" constant="8" id="jCS-A1-h8W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UMe-dz-jqu" secondAttribute="trailing" id="jLo-RC-UAE"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zSd-sV-RZH" secondAttribute="bottom" constant="12" id="jb6-ZW-o3a"/>
+                            <constraint firstItem="UMe-dz-jqu" firstAttribute="top" secondItem="Cy4-IZ-JAn" secondAttribute="bottom" constant="10" id="qDM-1u-WKV"/>
+                            <constraint firstItem="oze-KU-RMu" firstAttribute="top" secondItem="Siv-TR-B2h" secondAttribute="bottom" constant="8" id="rab-jm-bZU"/>
+                            <constraint firstItem="Siv-TR-B2h" firstAttribute="top" secondItem="xhd-wV-HC3" secondAttribute="bottom" constant="8" id="tr1-T1-ojt"/>
+                            <constraint firstItem="Siv-TR-B2h" firstAttribute="leading" secondItem="xyX-mv-Pq2" secondAttribute="leadingMargin" id="tui-zO-2xd"/>
+                            <constraint firstItem="UMe-dz-jqu" firstAttribute="leading" secondItem="xyX-mv-Pq2" secondAttribute="leadingMargin" id="upA-Rg-bcL"/>
+                            <constraint firstItem="apN-Fh-Uu8" firstAttribute="top" secondItem="oze-KU-RMu" secondAttribute="bottom" constant="80" id="vSH-Pd-yH4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JUB-gw-HTR"/>
+                                <exclude reference="jLo-RC-UAE"/>
+                                <exclude reference="jCS-A1-h8W"/>
+                                <exclude reference="tr1-T1-ojt"/>
+                                <exclude reference="ABZ-dE-fSx"/>
+                                <exclude reference="Abe-Qh-qw5"/>
+                                <exclude reference="ZpA-dO-rc6"/>
+                                <exclude reference="Umc-RX-cFQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="comidaLabel" destination="UMe-dz-jqu" id="OKd-bD-elV"/>
+                        <outlet property="imagenPhotoView" destination="oze-KU-RMu" id="pJA-Nm-Azv"/>
+                        <outlet property="nombreTextField" destination="xhd-wV-HC3" id="7Qz-Wy-RmI"/>
+                        <outlet property="ratingControl" destination="zSd-sV-RZH" id="KKH-Cj-aQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imO-c1-Efo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gms-DX-Imt">
+                    <connections>
+                        <action selector="seleccionaImagenDesdeLibreria:" destination="ov5-2m-pyP" id="Tsx-UY-urc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="563" y="301"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="1080" height="1080"/>
+    </resources>
+</document>
